@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="black">#000000</color>
+
+	<color name = "background">#ffffff</color>
+	<color name = "string_main">#2c2b30</color>
+	<color name = "text">#4a4450</color>
+	<color name = "on_fill">#FFFFFF</color>
+	<color name = "fill_1">#ffe6dc</color>
+	<color name = "fill_2">#f5c2ad</color>
+	<color name = "fill_3">#f39b76</color>
+	<color name = "text_white">#e5e5e5</color>
+	<color name = "toast">#EBFFFFFF</color>
+	<color name = "status_bar">#A8AF7B64</color>
+</resources>

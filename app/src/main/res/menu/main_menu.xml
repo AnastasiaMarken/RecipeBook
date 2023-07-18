@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<group android:checkableBehavior="single">
+		<item android:id="@+id/menuItem_home"
+			android:title="Рецепты"
+			android:icon="@drawable/recipe_menu_icon"></item>
+
+		<item android:id="@+id/menuItem_categories"
+			android:title="Категории"
+			android:icon="@drawable/cooking"></item>
+
+		<item android:id="@+id/menuItem_liked"
+			android:title="Избранное"
+			android:icon="@drawable/heart_1"></item>
+	</group>
+
+	<group android:checkableBehavior="single">
+		<item android:id="@+id/menuItem_ex"
+			android:title="Выход"
+			android:icon="@drawable/exit"></item>
+	</group>
+</menu>

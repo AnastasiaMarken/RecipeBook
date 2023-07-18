@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:id="@+id/model_comm"
+	android:layout_marginTop="20dp">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		>
+
+		<TextView
+			android:id="@+id/model_commentary_username"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="clip_horizontal"
+			android:layout_marginRight="8dp"
+			android:textColor="@color/string_main"
+			android:textFontWeight="400"
+			android:textSize="15dp" />
+
+		<ImageView
+			android:layout_width="8dp"
+			android:layout_height="8dp"
+			android:layout_gravity="center_vertical"
+			android:layout_marginRight="8dp"
+			app:srcCompat="@drawable/point" />
+
+		<TextView
+			android:id="@+id/model_commentary_date"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="bottom"
+			android:textColor="@color/text"
+			android:textSize="13dp" />
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/model_commentary_text"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:justificationMode="inter_word"
+		android:paddingHorizontal="10dp"
+		android:textColor="@color/string_main"
+		android:textSize="17dp"
+		android:layout_marginTop="8dp"/>
+
+</LinearLayout>

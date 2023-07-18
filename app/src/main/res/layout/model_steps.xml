@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:id="@+id/model_steps">
+
+	<ImageView
+		android:id="@+id/imageView"
+		android:layout_width="10dp"
+		android:layout_height="10dp"
+		android:layout_gravity="center_vertical"
+		android:layout_marginStart="10dp"
+		android:layout_marginTop="8dp"
+		android:src="@drawable/point"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+	<TextView
+		android:id="@+id/model_ListSteps"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:layout_marginLeft="20dp"
+		android:gravity="fill_horizontal"
+		android:justificationMode="inter_word"
+		android:textColor="@color/string_main"
+		android:textSize="19dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/imageView"
+		app:layout_constraintTop_toTopOf="parent"></TextView>
+</androidx.constraintlayout.widget.ConstraintLayout>

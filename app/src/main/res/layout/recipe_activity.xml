@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:background="@android:color/transparent"
+	android:orientation="vertical"
+	tools:context=".Recipe_Activity"
+	android:id="@+id/recipe_activity_dop">
+
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentBottom="true"
+		android:background="@android:color/transparent"
+		android:duplicateParentState="false">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@android:color/transparent"
+			android:orientation="vertical"
+			>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				>
+
+				<ImageView
+					android:id="@+id/recipeActivity_image"
+					android:layout_width="match_parent"
+					android:layout_height="200dp"
+					android:layout_alignParentLeft="true"
+					android:layout_alignParentTop="true"
+					android:layout_alignParentRight="true"
+					android:layout_alignParentBottom="true"
+					android:scaleType="centerCrop"></ImageView>
+
+				<ImageView
+					android:layout_width="45dp"
+					android:layout_height="45dp"
+					android:background="@android:color/transparent"
+					android:layout_alignParentTop="true"
+					android:layout_alignParentRight="true"
+					android:layout_marginTop="15dp"
+					android:layout_marginRight="15dp"
+					android:src="@drawable/icon_r"></ImageView>
+
+			</RelativeLayout>
+
+			<TextView
+				android:id="@+id/recipeActivity_title"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="20dp"
+				android:layout_marginTop="15dp"
+				android:gravity="left"
+				android:textColor="@color/string_main"
+				android:textSize="35dp"
+				android:textStyle="bold"></TextView>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="20dp"
+				android:layout_marginTop="15dp"
+				android:orientation="horizontal">
+
+				<ImageView
+					android:layout_width="30dp"
+					android:layout_height="30dp"
+					android:layout_gravity="center_vertical"
+					android:src="@drawable/time"></ImageView>
+
+				<TextView
+					android:id="@+id/recipeActivity_time"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_marginLeft="15dp"
+					android:gravity="left|center_vertical"
+					android:textColor="@color/string_main"
+					android:textSize="19dp"></TextView>
+			</LinearLayout>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="20dp"
+				android:layout_marginTop="15dp"
+				android:gravity="left"
+				android:text="Что понадобится:"
+				android:textColor="@color/string_main"
+				android:textSize="24dp"
+				android:textStyle="bold"></TextView>
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/ingr_RV"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="20dp"
+				android:layout_marginTop="10dp"></androidx.recyclerview.widget.RecyclerView>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="20dp"
+				android:layout_marginTop="15dp"
+				android:gravity="left"
+				android:text="Как готовить:"
+				android:textColor="@color/string_main"
+				android:textSize="24dp"
+				android:textStyle="bold"></TextView>
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/steps_RV"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="20dp"
+				android:layout_marginTop="10dp"></androidx.recyclerview.widget.RecyclerView>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="20dp"
+				android:layout_marginTop="15dp"
+				android:gravity="left"
+				android:text="Приятного аппетита!"
+				android:textColor="@color/string_main"
+				android:textSize="19dp"></TextView>
+
+			<EditText
+				android:id="@+id/et_comment"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="20dp"
+				android:layout_marginTop="20dp"
+				android:background="@drawable/shape_comm"
+				android:gravity="top"
+				android:hint="Оставить комментарий"
+				android:inputType="textMultiLine"
+				android:justificationMode="inter_word"
+				android:padding="10dp"
+				android:textColor="@color/string_main"
+				android:textSize="16dp"></EditText>
+
+			<RelativeLayout
+				android:id="@+id/rl_comment"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginHorizontal="20dp"
+				android:layout_marginTop="10dp"
+				android:visibility="gone">
+
+				<Button
+					android:id="@+id/cancel_comment"
+					android:layout_width="wrap_content"
+					android:layout_height="35dp"
+					android:layout_alignParentLeft="true"
+					android:background="@drawable/shape_btn"
+					android:gravity="center_horizontal|center_vertical"
+					android:text="Отмена"
+					android:textAllCaps="false"
+					android:textColor="@color/on_fill"
+					android:textSize="16dp"
+					android:textStyle="bold"></Button>
+
+				<Button
+					android:id="@+id/add_comment"
+					android:layout_width="wrap_content"
+					android:layout_height="35dp"
+					android:layout_alignParentRight="true"
+					android:background="@drawable/shape_btn"
+					android:gravity="center_horizontal|center_vertical"
+					android:text="Готово"
+					android:textAllCaps="false"
+					android:textColor="@color/on_fill"
+					android:textSize="16dp"
+					android:textStyle="bold"></Button>
+			</RelativeLayout>
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/commentary"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="20dp"
+				android:layout_marginBottom="100dp"></androidx.recyclerview.widget.RecyclerView>
+
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+
+
+	<androidx.cardview.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_centerInParent="true"
+		android:layout_centerVertical="true"
+		android:layout_marginHorizontal="55dp"
+		android:layout_marginBottom="15dp"
+		android:background="@android:color/transparent"
+		app:cardCornerRadius="20dp"
+		app:cardElevation="10dp">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@android:color/transparent"
+			android:paddingVertical="8dp">
+
+			<ImageView
+				android:id="@+id/previous_img_recipe"
+				android:layout_width="38dp"
+				android:layout_height="38dp"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="3"
+				android:background="@android:color/transparent"
+				android:src="@drawable/previous"></ImageView>
+
+			<ImageView
+				android:id="@+id/home_img_recipe"
+				android:layout_width="38dp"
+				android:layout_height="38dp"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="3"
+				android:background="@android:color/transparent"
+				android:src="@drawable/home"></ImageView>
+
+			<ImageView
+				android:id="@+id/heart"
+				android:layout_width="45dp"
+				android:layout_height="45dp"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="3"
+				android:background="@android:color/transparent"></ImageView>
+		</LinearLayout>
+	</androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
